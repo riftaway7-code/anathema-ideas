@@ -11,3 +11,5 @@ apple services (icloud, imessage, facetime, app store) check the machine's ident
 this only matters once the system reaches the desktop. current blocker is getting launchd to run, so this is a later-stage addon. also worth knowing: apple can still refuse a sign-in or block messaging on identities it dislikes, so it is a best-effort feature, not a guarantee.
 
 status: open, blocked on booting to userspace
+group: apple account / identity
+priority: parked (needs maintainer decision, see INDEX.md)
