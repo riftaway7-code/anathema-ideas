@@ -8,7 +8,7 @@ last sorted: 2026-11-22 (7 ideas from 5 people, 6 groups)
 
 | tag | meaning |
 | --- | --- |
-| `p0` | the current blocker. right now that is getting `/sbin/launchd` to run (see the main repo's status section). no idea here is p0. |
+| `p0` | the current blocker. right now that is getting the system to boot far enough to run userspace (see the main repo's status section). no idea here is p0. |
 | `p1` | next big job once the system boots. needed before anyone can use a desktop. |
 | `p2` | wanted soon after a first desktop. |
 | `p3` | later. real, but depends on several p1/p2 pieces first. |
@@ -18,14 +18,16 @@ priority is about order, not about how good the idea is. almost everything is bl
 
 ## the one thing to know before reading
 
-macOS inside anathema never sees your real pc hardware. it sees a small set of **virtual** devices that anathema emulates (today: one virtio disk, a uart, a timer, an interrupt controller and a framebuffer). anathema's own loader is what talks to the real hardware.
+anathema has two boot paths, and which one an idea belongs to changes what "support my card" means.
 
-so "support my card" usually means two jobs, both on the anathema side:
+**arm path (the original design).** macOS runs as an arm64 guest under translation and never sees your real pc hardware. it sees a small set of **virtual** devices that anathema emulates (today: one virtio disk, a uart, a timer, an interrupt controller and a framebuffer). so support is two jobs on the anathema side:
 
 1. a virtual device that macOS already has a driver for (for example virtio-net for networking), and
 2. a backend in anathema's loader that drives your real card.
 
-hackintosh drivers (kexts) like intelmausi, itlwm or applealc are for intel macOS running directly on pc hardware. they don't plug into anathema, because the arm64 macOS guest never touches the real device. they can still be useful as documentation of how a chip works, if their license allows reading them (check before copying anything).
+hackintosh drivers (kexts) don't plug into this path, because the guest never touches the real device. they can still document how a chip works, if their license allows reading them (check before copying anything).
+
+**native intel path (where the project is heading).** the intel macOS kernel boots directly on the pc through anathema's own uefi loader, with ahead-of-time translation for arm-only programs. here real drivers and hackintosh-style kexts do apply, and gpu, network and audio support are driver and kext work on the real hardware instead of emulated devices. the write-ups below were written for the arm path; where they say a driver "doesn't apply", read it as "only on the arm path".
 
 ## groups
 

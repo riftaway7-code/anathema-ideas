@@ -32,7 +32,7 @@ this half is the same for every pc. it can be built and tested in the linux harn
 | own i219-v driver | write a small send/receive driver in the loader from intel's public datasheets. | most control, one chip family per driver. |
 | tap device (linux harness only) | for development and testing. | not for end users. |
 
-hackintosh drivers like intelmausi drive the real nic from intel macOS. they don't apply here, because the guest is arm64 macOS and never touches the real chip. they (and linux's e1000e) are still useful as documentation of how the chip behaves, but check each license before copying anything: e1000e is gpl, which doesn't mix with anathema's mit code.
+hackintosh drivers like intelmausi drive the real nic from intel macOS. on this arm path they don't apply, because the guest is arm64 macOS and never touches the real chip (on the native intel path they would apply directly). they (and linux's e1000e) are still useful as documentation of how the chip behaves, but check each license before copying anything: e1000e is gpl, which doesn't mix with anathema's mit code.
 
 ## suggested steps
 
