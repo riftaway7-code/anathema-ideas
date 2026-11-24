@@ -11,3 +11,5 @@ other projects in this space (stela, liberator) currently have no wifi on macOS 
 macOS has no driver for intel wifi cards, so this needs a community-style driver (the hackintosh scene has open source ones such as itlwm). that only becomes useful after the system boots and the network stack works, so it is a later-stage addon.
 
 status: open, blocked on booting, ethernet comes first
+group: wifi
+priority: p3

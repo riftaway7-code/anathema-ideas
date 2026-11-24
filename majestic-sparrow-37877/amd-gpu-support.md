@@ -11,3 +11,5 @@ anathema boots arm macOS under translation, so it does not use a real gpu driver
 starting point: the display path. get the paravirtual gpu / framebuffer working first, then pick the host backend (vulkan would cover amd and nvidia).
 
 status: open
+group: display / gpu output
+priority: p1

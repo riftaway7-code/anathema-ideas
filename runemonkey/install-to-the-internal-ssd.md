@@ -11,3 +11,5 @@ the first goal is booting macOS from the usb stick to the installer. once that w
 things to decide later: which drive and partition it uses (a whole disk or a partition next to windows), how it boots after install, and how to keep the user's existing data safe.
 
 status: open, blocked on booting to the installer
+group: install to internal drive
+priority: p2
