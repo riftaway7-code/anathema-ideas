@@ -13,3 +13,5 @@ starting point: the display path. get the paravirtual gpu / framebuffer working 
 status: open
 group: display / gpu output
 priority: p1
+
++1 from adelstorm42 (discord): wants the amd radeon rx 7900 xtx (rdna 3, 24 gb) supported with full metal hardware acceleration. pc: intel core i5-13600kf + rx 7900 xtx. offers to help test future builds.

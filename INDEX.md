@@ -33,7 +33,7 @@ hackintosh drivers (kexts) don't plug into this path, because the guest never to
 
 | group | priority | ideas (votes) | asked by | blocked on | write-up |
 | --- | --- | --- | --- | --- | --- |
-| display / gpu output | `p1` | [amd gpu support](majestic-sparrow-37877/amd-gpu-support.md), [amd gpu support +1](npcplayz-14599/amd-gpu-support.md) (2) | majestic_sparrow_37877, npcplayz_14599 | booting; apple's paravirtual gpu protocol | [display output](writeups/display-output.md) |
+| display / gpu output | `p1` | [amd gpu support](majestic-sparrow-37877/amd-gpu-support.md), [amd gpu support +1](npcplayz-14599/amd-gpu-support.md), +1 adelstorm42 (rx 7900 xtx) (3) | majestic_sparrow_37877, npcplayz_14599, adelstorm42 | booting; apple's paravirtual gpu protocol | [display output](writeups/display-output.md) |
 | wired networking | `p2` | [intel i219-v ethernet](diamantinoop/intel-i219-v-ethernet.md) (1) | diamantinoop | booting | [wired networking](writeups/wired-networking.md) |
 | install to internal drive | `p2` | [install to the internal ssd](runemonkey/install-to-the-internal-ssd.md) (1) | runemonkey | booting to the installer; display | [install to an internal drive](writeups/install-to-internal-drive.md) |
 | audio | `p3` | [sound in early versions](itsnotungofa/sound-in-early-versions.md) (1) | itsnotungofa | booting | |
